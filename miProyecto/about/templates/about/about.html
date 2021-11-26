@@ -1,0 +1,14 @@
+{% extends "index.html"%} {% block contenido%}
+
+<h1> Pagina de About</h1>
+<p>Nombre:{{nombre}} </p>
+<p>Apellido: {{apellido}}</p>
+<ul>
+
+    {% for item in milista%}
+    <li>
+        {{item}}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock contenido %}

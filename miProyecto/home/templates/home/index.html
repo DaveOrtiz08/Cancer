@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento de Patrones</title>
+</head>
+
+<body>
+    <div class="img-header">
+        <h1>BIENVENIDO</h1>
+        <hr>
+        <p>Curso De Reconocimiento De Patrones Sintáctico Estructural</p>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li><a href="{% url 'home:home' %}" target="_blank" class="activate">Home</a></li>
+            <li><a href="{% url 'about:about' %}" target="_blank">About </a></li>
+            <li><a href="{% url 'sintactico:sintactico' %}" target="_blank">Sintactico</a></li>
+            <li><a href="{% url 'grafo:grafo' %}" target="_blank">Grafo </a></li>
+
+
+        </ul>
+    </nav>
+    {% block contenido %}
+
+    <h1>Cursito repasador para que Naruto aprenda</h1>
+    <h2>Octubre mes del cancer de mama</h2>
+
+    <table style="border: 1px black;">
+        <thead>
+            <tr>
+                <th>Clave</th>
+                <th>Temperatura</th>
+                <th>Color</th>
+                <th>Inflamacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for elemento in lista %}
+            <tr>
+                <th>{{elemento.pk}}</th>
+                <th>{{elemento.temperatura}}</th>
+                <th>{{elemento.color}}</th>
+                <th>{{elemento.inflammation}}</th>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    {% endblock contenido %}
+
+</body>
+
+</html>
